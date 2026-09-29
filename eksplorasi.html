@@ -659,7 +659,7 @@
                 <div class="interact-ring"></div>
             </div>
 
-            <div class="equipment-point" data-equipment="microClimate" data-x="6" data-y="49">
+            <div class="equipment-point" data-equipment="microClimate" data-x="6" data-y="49" data-dummy="true" style="pointer-events: none;">
                 <div class="model-shadow"></div>
                 <div class="interact-ring"></div>
             </div>
@@ -1696,6 +1696,8 @@
             });
 
             equipmentPoints.forEach((point) => {
+                if (point.hasAttribute("data-dummy")) return;
+
                 const dist = Math.hypot(
                     playerPos.x - parseFloat(point.getAttribute("data-x")), 
                     playerPos.y - parseFloat(point.getAttribute("data-y"))
