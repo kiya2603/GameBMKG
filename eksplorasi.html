@@ -585,7 +585,305 @@
 
         .equipment-point[data-equipment="thermometerBerumput"] .equipment-icon svg { transform: rotate(90deg); }
         .equipment-point[data-equipment="thermometerGundul"] .equipment-icon svg { transform: rotate(-90deg); }
-    </style>
+    
+        /* =========================================================
+           RESPONSIVE GAME - TAMBAHAN SAJA
+           Tidak mengubah JavaScript, posisi alat, sistem gerak,
+           maupun struktur game.
+           ========================================================= */
+
+        /* Tablet */
+        @media (max-width: 1024px) {
+            .explore-topbar {
+                padding: 10px 14px !important;
+                gap: 8px !important;
+            }
+
+            .explore-topbar h1,
+            .explore-topbar h2,
+            .explore-topbar .title {
+                font-size: clamp(14px, 2vw, 20px) !important;
+            }
+
+            .explore-back-btn,
+            .back-btn,
+            .about-btn {
+                min-width: 40px !important;
+                min-height: 40px !important;
+                padding: 8px 12px !important;
+                font-size: 13px !important;
+            }
+
+            .time-badge,
+            #timeClock {
+                font-size: 12px !important;
+            }
+
+            .equipment-label {
+                font-size: 9px !important;
+                padding: 3px 7px !important;
+                margin-bottom: 4px !important;
+            }
+
+            .explore-player {
+                width: 48px !important;
+                height: 87px !important;
+            }
+
+            .touch-controls {
+                transform: scale(0.9) !important;
+                transform-origin: bottom left !important;
+            }
+
+            .explore-map,
+            #exploreMap {
+                transform: scale(0.9) !important;
+                transform-origin: bottom right !important;
+            }
+
+            .interaction-hint {
+                max-width: 75vw !important;
+                font-size: 12px !important;
+            }
+
+            .about-modal,
+            .equipment-modal {
+                padding: 16px !important;
+            }
+
+            .equipment-modal-box {
+                width: min(90vw, 600px) !important;
+                max-height: 85vh !important;
+                overflow-y: auto !important;
+            }
+        }
+
+        /* HP */
+        @media (max-width: 768px) {
+            .explore-viewport {
+                width: 100vw !important;
+                height: 100dvh !important;
+            }
+
+            .explore-topbar {
+                padding: 7px 9px !important;
+                gap: 5px !important;
+            }
+
+            .explore-topbar h1,
+            .explore-topbar h2,
+            .explore-topbar .title {
+                font-size: clamp(11px, 3.2vw, 16px) !important;
+                max-width: 48vw !important;
+            }
+
+            .explore-back-btn,
+            .back-btn,
+            .about-btn {
+                min-width: 34px !important;
+                min-height: 34px !important;
+                padding: 6px 8px !important;
+                font-size: 11px !important;
+            }
+
+            .time-badge,
+            #timeClock {
+                font-size: 10px !important;
+                padding: 4px 6px !important;
+            }
+
+            /* Seluruh label alat ikut mengecil di HP */
+            .equipment-label {
+                font-size: clamp(7px, 1.8vw, 9px) !important;
+                padding: 2px 5px !important;
+                border-radius: 4px !important;
+                margin-bottom: 3px !important;
+                max-width: 42vw !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+            }
+
+            /* Karakter ikut menyesuaikan layar */
+            .explore-player {
+                width: 43px !important;
+                height: 78px !important;
+            }
+
+            .player-shadow {
+                width: 40px !important;
+                height: 10px !important;
+            }
+
+            /* Alat yang berupa SVG mengikuti ukuran world,
+               sementara label dan elemen pendukung mengecil */
+            .equipment-icon {
+                max-width: 90% !important;
+            }
+
+            .model-shadow {
+                width: 32px !important;
+                height: 9px !important;
+            }
+
+            .interact-ring {
+                width: 21px !important;
+                height: 8px !important;
+            }
+
+            .touch-controls {
+                transform: scale(0.78) !important;
+                transform-origin: bottom left !important;
+                bottom: 8px !important;
+                left: 8px !important;
+            }
+
+            .explore-map,
+            #exploreMap {
+                transform: scale(0.76) !important;
+                transform-origin: bottom right !important;
+                right: 8px !important;
+                bottom: 8px !important;
+            }
+
+            .interaction-hint {
+                left: 50% !important;
+                bottom: 75px !important;
+                width: max-content !important;
+                max-width: 72vw !important;
+                font-size: 10px !important;
+                padding: 6px 9px !important;
+                transform: translateX(-50%) !important;
+            }
+
+            .about-modal,
+            .equipment-modal {
+                padding: 10px !important;
+            }
+
+            .equipment-modal-box {
+                width: 92vw !important;
+                max-width: 92vw !important;
+                max-height: 82dvh !important;
+                overflow-y: auto !important;
+                border-radius: 12px !important;
+                padding: 12px !important;
+            }
+
+            .about-modal-box {
+                width: 90vw !important;
+                max-width: 90vw !important;
+                max-height: 82dvh !important;
+                overflow-y: auto !important;
+            }
+        }
+
+        /* HP kecil */
+        @media (max-width: 480px) {
+            .explore-topbar {
+                padding: 5px 6px !important;
+            }
+
+            .explore-topbar h1,
+            .explore-topbar h2,
+            .explore-topbar .title {
+                font-size: 10px !important;
+                max-width: 43vw !important;
+            }
+
+            .explore-back-btn,
+            .back-btn,
+            .about-btn {
+                min-width: 30px !important;
+                min-height: 30px !important;
+                padding: 5px 6px !important;
+                font-size: 9px !important;
+            }
+
+            .time-badge,
+            #timeClock {
+                font-size: 9px !important;
+                padding: 3px 5px !important;
+            }
+
+            .equipment-label {
+                font-size: 6.5px !important;
+                padding: 2px 4px !important;
+                max-width: 38vw !important;
+            }
+
+            .explore-player {
+                width: 39px !important;
+                height: 71px !important;
+            }
+
+            .touch-controls {
+                transform: scale(0.68) !important;
+                bottom: 5px !important;
+                left: 5px !important;
+            }
+
+            .explore-map,
+            #exploreMap {
+                transform: scale(0.66) !important;
+                right: 5px !important;
+                bottom: 5px !important;
+            }
+
+            .interaction-hint {
+                bottom: 65px !important;
+                max-width: 80vw !important;
+                font-size: 9px !important;
+                padding: 5px 7px !important;
+            }
+
+            .equipment-modal-box,
+            .about-modal-box {
+                width: 94vw !important;
+                max-width: 94vw !important;
+                max-height: 80dvh !important;
+                padding: 10px !important;
+            }
+        }
+
+        /* HP / tablet landscape */
+        @media (max-width: 1024px) and (orientation: landscape) {
+            .explore-topbar {
+                padding: 5px 9px !important;
+            }
+
+            .touch-controls {
+                transform: scale(0.72) !important;
+                transform-origin: bottom left !important;
+                bottom: 5px !important;
+                left: 6px !important;
+            }
+
+            .explore-map,
+            #exploreMap {
+                transform: scale(0.70) !important;
+                transform-origin: bottom right !important;
+                right: 6px !important;
+                bottom: 5px !important;
+            }
+
+            .interaction-hint {
+                bottom: 55px !important;
+            }
+
+            .equipment-modal-box,
+            .about-modal-box {
+                max-height: 88dvh !important;
+            }
+        }
+
+        /* Layar sentuh: hilangkan efek hover yang terlalu besar */
+        @media (hover: none) and (pointer: coarse) {
+            .equipment-point:hover {
+                transform: translate(-50%, -100%) scale(0.9);
+                filter: brightness(1.05) drop-shadow(0 6px 10px rgba(0,0,0,0.3));
+            }
+        }
+</style>
 </head>
 
 <body class="explore-game-page theme-malam">
